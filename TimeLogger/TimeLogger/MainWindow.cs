@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace TimeLogger
@@ -12,7 +6,7 @@ namespace TimeLogger
     public partial class MainWindow : Form
     {
         private DateTime _currentDatetime;
-        private const string datetimeFormat = "yyyy-MM-dd HH:mm:ss";
+        private const string DatetimeFormat = "yyyy-MM-dd HH:mm:ss";
 
         public MainWindow()
         {
@@ -33,15 +27,15 @@ namespace TimeLogger
         private void UpdateTime()
         {
             _currentDatetime = DateTime.Now;
-            lblDateTime.Text = _currentDatetime.ToString(datetimeFormat);
+            lblDateTime.Text = _currentDatetime.ToString(DatetimeFormat);
         }
 
         private void LogTime()
         {
-            var timeStr = _currentDatetime.ToString(datetimeFormat);
+            var timeStr = _currentDatetime.ToString(DatetimeFormat);
             var messageStr = txtMessage.Text;
 
-            string loggerMsg = "";
+            var loggerMsg = "";
             if (string.IsNullOrEmpty(messageStr))
             {
                 loggerMsg = string.Format("{0}{1}", timeStr, Environment.NewLine);
@@ -49,9 +43,9 @@ namespace TimeLogger
             }
             else
             {
-                loggerMsg = string.Format("{0} .- {1}{2}", timeStr, messageStr, Environment.NewLine);
+                loggerMsg = string.Format("{0}.- {1}{2}", timeStr, messageStr, Environment.NewLine);
                 txtLogger.Text = loggerMsg + txtLogger.Text;
-                txtMessage.Text = "";
+                txtMessage.Text = string.Empty;
             }
             
         }
@@ -63,8 +57,11 @@ namespace TimeLogger
 
         private void txtMessage_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter && ModifierKeys != Keys.Control)
+            {
+                e.SuppressKeyPress = true;
                 LogTime();
+            }
         }
 
     }

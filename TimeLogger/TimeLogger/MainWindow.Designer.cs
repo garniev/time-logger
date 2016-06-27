@@ -48,7 +48,7 @@
             this.groupBox1.Size = new System.Drawing.Size(255, 134);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Time";
+            this.groupBox1.Text = "Date Time";
             // 
             // lblDateTime
             // 
@@ -69,7 +69,7 @@
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(187, 65);
-            this.txtMessage.TabIndex = 2;
+            this.txtMessage.TabIndex = 1;
             this.txtMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMessage_KeyDown);
             // 
             // btnLogTime
@@ -79,7 +79,7 @@
             this.btnLogTime.Location = new System.Drawing.Point(6, 94);
             this.btnLogTime.Name = "btnLogTime";
             this.btnLogTime.Size = new System.Drawing.Size(187, 33);
-            this.btnLogTime.TabIndex = 1;
+            this.btnLogTime.TabIndex = 2;
             this.btnLogTime.Text = "Log Time";
             this.btnLogTime.UseVisualStyleBackColor = true;
             this.btnLogTime.Click += new System.EventHandler(this.btnLogTime_Click);
@@ -94,8 +94,8 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.groupBox2.Size = new System.Drawing.Size(458, 143);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.Size = new System.Drawing.Size(460, 143);
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Logger";
             // 
@@ -106,8 +106,8 @@
             this.txtLogger.Multiline = true;
             this.txtLogger.Name = "txtLogger";
             this.txtLogger.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtLogger.Size = new System.Drawing.Size(444, 116);
-            this.txtLogger.TabIndex = 0;
+            this.txtLogger.Size = new System.Drawing.Size(446, 116);
+            this.txtLogger.TabIndex = 3;
             // 
             // groupBox3
             // 
@@ -118,7 +118,7 @@
             this.groupBox3.Location = new System.Drawing.Point(273, 13);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(199, 133);
-            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Message";
             // 
